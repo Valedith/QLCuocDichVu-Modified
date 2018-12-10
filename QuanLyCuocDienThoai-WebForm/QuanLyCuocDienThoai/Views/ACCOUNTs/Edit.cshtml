@@ -1,0 +1,77 @@
+﻿@model QuanLyCuocDienThoai.Models.ACCOUNT
+@{
+    ViewBag.Title = "Chi tiết";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div id="page-wrapper">
+    <div class="row">
+        @using (Html.BeginForm())
+        {
+            @Html.AntiForgeryToken()
+
+        <div class="form-horizontal">
+
+            <h4 style="margin-top: 23px; font-size: 40px; color: #4800ff">Thông tin tài khoản</h4>
+            <hr />
+            @if (ViewBag.SuccessMessage != null)
+    {
+        <div class="alert alert-success">
+            @ViewBag.SuccessMessage
+        </div>
+}
+            @if (ViewBag.FailMessage != null)
+    {
+        <div class="alert alert-danger">
+            @ViewBag.FailMessage
+        </div>
+}
+            @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+            @Html.HiddenFor(model => model.ID_CUSTOMER)
+            @Html.HiddenFor(model => model.ISEMAILVERIFY)
+            @Html.HiddenFor(model => model.ACTIVATIONCODE)
+            @Html.HiddenFor(model => model.RESETPASSWORDCODE)
+            <div class="form-group">
+                <label class="control-label col-md-2">EMAIL<span style="color: #ff0000">*</span></label>
+                <div class="col-md-5">
+                    @Html.EditorFor(model => model.EMAIL, new { htmlAttributes = new { @class = "form-control", @readonly = "readonly" } })
+                    @Html.ValidationMessageFor(model => model.EMAIL, "", new { @class = "text-danger" })
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="control-label col-md-2">MẬT KHẨU<span style="color: #ff0000">*</span></label>
+                <div class="col-md-5">
+                    @Html.EditorFor(model => model.PASSWORD, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.PASSWORD, "", new { @class = "text-danger" })
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="control-label col-md-2">XÁC NHẬN MẬT KHẨU<span style="color: #ff0000">*</span></label>
+                <div class="col-md-5">
+                    @Html.EditorFor(model => model.CONFIRMPASSWORD, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.CONFIRMPASSWORD, "", new { @class = "text-danger" })
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="control-label col-md-2">XÁC NHẬN EMAIL<span style="color: #ff0000">*</span></label>
+                <div class="col-md-5">
+                    <input class="form-control" type="text" value="ĐÃ XÁC NHẬN" readonly>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-sm-2 control-label"></label>
+                <div class="col-sm-8">
+                    <label class="checkbox-inline">
+                        <input type="checkbox" onclick="enableBtn()">Tôi cam kết thông tin đã khai là đúng
+                    </label>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-md-offset-2 col-md-8">
+                    <input id="btnDisabled" type="submit" value="Sửa thông tin" class="btn btn-success" disabled />
+                </div>
+            </div>
+        </div>
+        }
+    </div>
+</div>

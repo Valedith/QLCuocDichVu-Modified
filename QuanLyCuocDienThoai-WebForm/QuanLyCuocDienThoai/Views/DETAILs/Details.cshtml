@@ -1,0 +1,67 @@
+﻿@model QuanLyCuocDienThoai.Models.DETAIL
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>DETAIL</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.TIME_START)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TIME_START)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TIME_STOP)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TIME_STOP)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MINUTE_AFTER7)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MINUTE_AFTER7)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MINUTE_AFTER23)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MINUTE_AFTER23)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FARE)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FARE)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SIM.ID_CUSTOMER)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SIM.ID_CUSTOMER)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
