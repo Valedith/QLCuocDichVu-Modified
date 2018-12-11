@@ -52,6 +52,9 @@
             this.pnl_window_add = new System.Windows.Forms.Panel();
             this.table_customer = new DevExpress.XtraGrid.GridControl();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.panel_conPass = new System.Windows.Forms.Panel();
+            this.txt_confirmPass = new System.Windows.Forms.TextBox();
+            this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.pnl_title_winform.SuspendLayout();
             this.form_info.SuspendLayout();
             this.pnl_password.SuspendLayout();
@@ -60,6 +63,7 @@
             this.pnl_window_add.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.table_customer)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
+            this.panel_conPass.SuspendLayout();
             this.SuspendLayout();
             // 
             // function_panel_btn
@@ -151,7 +155,9 @@
             // 
             // form_info
             // 
+            this.form_info.Controls.Add(this.panel_conPass);
             this.form_info.Controls.Add(this.pnl_password);
+            this.form_info.Controls.Add(this.labelControl1);
             this.form_info.Controls.Add(this.lbl_password);
             this.form_info.Controls.Add(this.pnl_email);
             this.form_info.Controls.Add(this.lbl_email);
@@ -178,6 +184,7 @@
             this.txt_password.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txt_password.Location = new System.Drawing.Point(10, 9);
             this.txt_password.Name = "txt_password";
+            this.txt_password.PasswordChar = '*';
             this.txt_password.Size = new System.Drawing.Size(255, 15);
             this.txt_password.TabIndex = 7;
             // 
@@ -287,6 +294,36 @@
             this.gridView1.RowHeight = 25;
             this.gridView1.FocusedRowChanged += new DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventHandler(this.gridView1_FocusedRowChanged);
             // 
+            // panel_conPass
+            // 
+            this.panel_conPass.Controls.Add(this.txt_confirmPass);
+            this.panel_conPass.Location = new System.Drawing.Point(131, 157);
+            this.panel_conPass.Name = "panel_conPass";
+            this.panel_conPass.Size = new System.Drawing.Size(277, 33);
+            this.panel_conPass.TabIndex = 40;
+            this.panel_conPass.Paint += new System.Windows.Forms.PaintEventHandler(this.pnl_info_Paint);
+            // 
+            // txt_confirmPass
+            // 
+            this.txt_confirmPass.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txt_confirmPass.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txt_confirmPass.Location = new System.Drawing.Point(10, 9);
+            this.txt_confirmPass.Name = "txt_confirmPass";
+            this.txt_confirmPass.PasswordChar = '*';
+            this.txt_confirmPass.Size = new System.Drawing.Size(255, 15);
+            this.txt_confirmPass.TabIndex = 7;
+            // 
+            // labelControl1
+            // 
+            this.labelControl1.Appearance.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.labelControl1.Appearance.Options.UseFont = true;
+            this.labelControl1.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
+            this.labelControl1.Location = new System.Drawing.Point(15, 157);
+            this.labelControl1.Name = "labelControl1";
+            this.labelControl1.Size = new System.Drawing.Size(109, 33);
+            this.labelControl1.TabIndex = 39;
+            this.labelControl1.Text = "Nhập lại mật khẩu";
+            // 
             // AddAccount_GUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -310,6 +347,8 @@
             this.pnl_window_add.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.table_customer)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
+            this.panel_conPass.ResumeLayout(false);
+            this.panel_conPass.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -334,5 +373,8 @@
         private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
         private System.Windows.Forms.Panel pnl_password;
         private System.Windows.Forms.TextBox txt_password;
+        private System.Windows.Forms.Panel panel_conPass;
+        private System.Windows.Forms.TextBox txt_confirmPass;
+        private DevExpress.XtraEditors.LabelControl labelControl1;
     }
 }

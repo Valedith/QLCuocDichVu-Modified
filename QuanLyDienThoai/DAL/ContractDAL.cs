@@ -77,8 +77,16 @@ namespace QuanLyDienThoai.DAL
             edited_contract.STATUS = contract.STATUS;
             db.SaveChanges();
             db.Entry(contract).State = EntityState.Detached;
-        }       
-
+        }
+        public List<CONTRACT> SearchBy_CustomerName(string name)
+        {
+            if (db.CONTRACTs.Any(c => c.SIM.CUSTOMER.NAME.Contains(name)))
+            {
+                List<CONTRACT> result = db.CONTRACTs.Where(c => c.SIM.CUSTOMER.NAME.Contains(name)).ToList();
+                return result;
+            }
+            return null;
+        }
         public void cancelContract_bySimID()
         {
             var cancel_contract = db.CONTRACTs.First(p => p.ID_SIM == contract.ID_SIM);
@@ -88,5 +96,6 @@ namespace QuanLyDienThoai.DAL
 
             db.Entry(cancel_contract).State = EntityState.Detached;
         }
+
     }
 }

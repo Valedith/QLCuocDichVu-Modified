@@ -23,8 +23,22 @@ namespace QuanLyDienThoai.GUI.Sim_GUI
         public Sim_GUI()
         {
             InitializeComponent();
+            txt_search.Text = "Tìm kiếm theo tên khách hàng...";
+
+            txt_search.GotFocus += RemoveText;
+            txt_search.LostFocus += AddText;
         }
 
+        public void RemoveText(object sender, EventArgs e)
+        {
+            txt_search.Text = "";
+        }
+
+        public void AddText(object sender, EventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(txt_search.Text))
+                txt_search.Text = "Tìm kiếm theo tên khách hàng...";
+        }
         // Hàm tô màu viền cho panels
         private void setColorBorder(int r, int g, int b, PaintEventArgs e, Panel[] panels)
         {
@@ -147,7 +161,27 @@ namespace QuanLyDienThoai.GUI.Sim_GUI
         // Function Tìm Tên KH
         private void search()
         {
-           
+            if (simbus.SearchBy_CustomerName(txt_search.Text) == null)
+            {
+                Print_MessageBox("Không tìm thấy dữ liệu", "Kết quả");
+            }
+            else
+            {
+                table_sim.DataSource = new BindingSource(simbus.SearchBy_CustomerName(txt_search.Text), "");
+                txt_id_sim.Text = gridView1.GetFocusedRowCellValue("ID_SIM").ToString();
+                if (gridView1.GetFocusedRowCellValue("ID_CUSTOMER") == null)
+                {
+                    txt_id_customer.Text = "";
+                }
+                else
+                    txt_id_customer.Text = gridView1.GetFocusedRowCellValue("ID_CUSTOMER").ToString();
+                txt_numphone.Text = gridView1.GetFocusedRowCellValue("PHONENUMBER").ToString();
+                string status = gridView1.GetFocusedRowCellValue("STATUS").ToString();
+                if (status == "True")
+                    group_rad_status.SelectedIndex = 1;
+                else
+                    group_rad_status.SelectedIndex = 0;
+            }
         }
 
         // Function Popup Bảng thêm row
@@ -187,6 +221,11 @@ namespace QuanLyDienThoai.GUI.Sim_GUI
             {
                 e.Handled = true;
             }
+        }
+
+        private void btn_search_Click(object sender, EventArgs e)
+        {
+            search();
         }
     }
 }

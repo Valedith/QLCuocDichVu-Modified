@@ -86,11 +86,11 @@ namespace QuanLyDienThoai.DAL
             db.Entry(detail).State = EntityState.Detached;
         }
 
-        public IEnumerable<DETAIL> SearchByIDSIM(string id)
+        public IEnumerable<DETAIL> SearchByName(string name)
         {
-            if (db.DETAILs.Any(c => c.ID_SIM.Contains(id)))
+            if (db.DETAILs.Any(c => c.SIM.CUSTOMER.NAME.Contains(name)))
             {
-                List<DETAIL> result = db.DETAILs.Where(c => c.ID_SIM.Contains(id)).ToList();
+                List<DETAIL> result = db.DETAILs.Where(c => c.SIM.CUSTOMER.NAME.Contains(name)).ToList();
                 return result;
             }
             return null;

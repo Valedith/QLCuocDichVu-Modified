@@ -30,8 +30,23 @@ namespace QuanLyDienThoai.GUI.Bill_GUI
         public Bill_GUI()
         {
             InitializeComponent();
+            txt_search.Text = "Tìm kiếm theo tên khách hàng...";
+
+            txt_search.GotFocus += RemoveText;
+            txt_search.LostFocus += AddText;
         }
-        
+
+        public void RemoveText(object sender, EventArgs e)
+        {
+            txt_search.Text = "";
+        }
+
+        public void AddText(object sender, EventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(txt_search.Text))
+                txt_search.Text = "Tìm kiếm theo tên khách hàng...";
+        }
+
         private void table_customer_Load(object sender, EventArgs e)
         {
             loadDataTable();
@@ -166,12 +181,13 @@ namespace QuanLyDienThoai.GUI.Bill_GUI
 
         private void search()
         {            
-            if(billbus.SearchByIDSIM(txt_search.Text) == null)
+            if(billbus.SearchBy_CustomerName(txt_search.Text) == null)
             {
                 Print_MessageBox("Không tìm thấy dữ liệu", "Kết quả");
             }
             else
             {
+                table_bill.DataSource = new BindingSource(billbus.SearchBy_CustomerName(txt_search.Text), "");
                 txt_id.Text = gridView1.GetFocusedRowCellValue("ID_BILL").ToString();
                 txt_SIM.Text = gridView1.GetFocusedRowCellValue("ID_SIM").ToString();
                 txt_dateex.Text = gridView1.GetFocusedRowCellValue("DATE_EXPORT").ToString();

@@ -321,6 +321,7 @@
             this.btn_search.Name = "btn_search";
             this.btn_search.Size = new System.Drawing.Size(31, 32);
             this.btn_search.TabIndex = 2;
+            this.btn_search.Click += new System.EventHandler(this.btn_search_Click);
             // 
             // pnl_search
             // 

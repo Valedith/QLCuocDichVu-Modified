@@ -77,6 +77,5 @@ C:\Users\User\Desktop\QuanLyDichVuDT-master\QuanLyDienThoaiEntity\bin\Microsoft.
 C:\Users\User\Desktop\QuanLyDichVuDT-master\QuanLyDienThoaiEntity\bin\Microsoft.Owin.Security.Google.xml
 C:\Users\User\Desktop\QuanLyDichVuDT-master\QuanLyDienThoaiEntity\bin\Microsoft.Owin.Security.Twitter.xml
 C:\Users\User\Desktop\QuanLyDichVuDT-master\QuanLyDienThoaiEntity\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
-C:\Users\User\Desktop\QuanLyDichVuDT-master\QuanLyDienThoaiEntity\obj\Debug\QuanLyDienThoaiEntity.csprojResolveAssemblyReference.cache
 C:\Users\User\Desktop\QuanLyDichVuDT-master\QuanLyDienThoaiEntity\obj\Debug\QuanLyDienThoaiEntity.dll
 C:\Users\User\Desktop\QuanLyDichVuDT-master\QuanLyDienThoaiEntity\obj\Debug\QuanLyDienThoaiEntity.pdb

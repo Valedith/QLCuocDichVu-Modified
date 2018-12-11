@@ -100,7 +100,7 @@ namespace QuanLyDienThoai.GUI.Account_GUI
 
         private void pnl_info_Paint(object sender, PaintEventArgs e)
         {
-            setColorBorder(40, 40, 40, e, new Panel[] { pnl_id_customer, pnl_email, pnl_password});
+            setColorBorder(40, 40, 40, e, new Panel[] { pnl_id_customer, pnl_email, pnl_password, panel_conPass});
         }
 
         // Function print ra message
@@ -116,7 +116,8 @@ namespace QuanLyDienThoai.GUI.Account_GUI
             if (Dialogresult == DialogResult.Yes)
             {
                 string passwordhash = MD5Hash.CreateMD5(txt_password.Text);
-                string result = accountbus.Create(txt_email.Text, txt_id_customer.Text, passwordhash);
+                string confirmpass_hash = MD5Hash.CreateMD5(txt_confirmPass.Text);
+                string result = accountbus.Create(txt_email.Text, txt_id_customer.Text, passwordhash,confirmpass_hash);
                 Print_MessageBox(result, "Thông báo thêm");
                 
             }            

@@ -183,6 +183,6 @@ C:\Users\User\Desktop\QuanLyDichVuDT-master\QuanLyCuocDienThoai-WebForm\QuanLyCu
 C:\Users\User\Desktop\QuanLyDichVuDT-master\QuanLyCuocDienThoai-WebForm\QuanLyCuocDienThoai\obj\Debug\QuanLyCuocDienThoai.csprojResolveAssemblyReference.cache
 C:\Users\User\Desktop\QuanLyDichVuDT-master\QuanLyCuocDienThoai-WebForm\QuanLyCuocDienThoai\obj\Debug\QuanLyCuocDienThoai.dll
 C:\Users\User\Desktop\QuanLyDichVuDT-master\QuanLyCuocDienThoai-WebForm\QuanLyCuocDienThoai\obj\Debug\QuanLyCuocDienThoai.pdb
+C:\Users\User\Desktop\QuanLyDichVuDT-master\QuanLyCuocDienThoai-WebForm\QuanLyCuocDienThoai\bin\QuanLyCuocDienThoai.dll.config
 C:\Users\User\Desktop\QuanLyDichVuDT-master\QuanLyCuocDienThoai-WebForm\QuanLyCuocDienThoai\bin\QuanLyDienThoaiEntity.dll
 C:\Users\User\Desktop\QuanLyDichVuDT-master\QuanLyCuocDienThoai-WebForm\QuanLyCuocDienThoai\bin\QuanLyDienThoaiEntity.pdb
-C:\Users\User\Desktop\QuanLyDichVuDT-master\QuanLyCuocDienThoai-WebForm\QuanLyCuocDienThoai\bin\QuanLyCuocDienThoai.dll.config

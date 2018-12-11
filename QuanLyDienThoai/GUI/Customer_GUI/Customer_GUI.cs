@@ -23,6 +23,21 @@ namespace QuanLyDienThoai.GUI.Customer_GUI
         public Customer_GUI()
         {
             InitializeComponent();
+            txt_search.Text = "Tìm kiếm theo tên khách hàng...";
+
+            txt_search.GotFocus += RemoveText;
+            txt_search.LostFocus += AddText;
+        }
+
+        public void RemoveText(object sender, EventArgs e)
+        {
+            txt_search.Text = "";
+        }
+
+        public void AddText(object sender, EventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(txt_search.Text))
+                txt_search.Text = "Tìm kiếm theo tên khách hàng...";
         }
 
         private void table_customer_Load(object sender, EventArgs e)

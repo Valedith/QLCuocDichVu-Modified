@@ -38,9 +38,9 @@ namespace QuanLyDienThoai.BUS
             bill_dal.setBill(id);
             bill_dal.Pay();
         }
-        public IEnumerable<BILL> SearchByIDSIM(string id)
+        public IEnumerable<BILL> SearchBy_CustomerName(string name)
         {
-            return bill_dal.SearchByIDSIM(id);
+            return bill_dal.SearchBy_CustomerName(name);
         }
 
         public bool SendBillByEmail(string toMail, string name_customer, string id_sim, DateTime date_ex, DateTime date_cut, int postage, int fare)

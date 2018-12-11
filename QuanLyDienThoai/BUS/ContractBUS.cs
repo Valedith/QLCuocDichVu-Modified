@@ -49,6 +49,10 @@ namespace QuanLyDienThoai.BUS
                 contract_dal.Update();
                 return "Đã lưu thay đổi !";
             }
-        }        
+        }
+        public IEnumerable<CONTRACT> SearchBy_CustomerName(string name)
+        {
+            return contract_dal.SearchBy_CustomerName(name);
+        }
     }
 }

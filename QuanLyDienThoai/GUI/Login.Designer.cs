@@ -45,7 +45,6 @@
             this.pnl_login = new System.Windows.Forms.Panel();
             this.link_url_website = new System.Windows.Forms.Label();
             this.title_link_website = new System.Windows.Forms.Label();
-            this.forget_passwd = new System.Windows.Forms.Label();
             this.pnl_form_login = new System.Windows.Forms.Panel();
             this.pnl_password_icon = new System.Windows.Forms.Panel();
             this.pnl_user_icon = new System.Windows.Forms.Panel();
@@ -193,7 +192,7 @@
             this.pnl_logo.Location = new System.Drawing.Point(103, 52);
             this.pnl_logo.Name = "pnl_logo";
             this.pnl_logo.Size = new System.Drawing.Size(128, 125);
-            this.pnl_logo.TabIndex = 93;
+            this.pnl_logo.TabIndex = 0;
             // 
             // name_design
             // 
@@ -211,7 +210,6 @@
             this.pnl_login.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
             this.pnl_login.Controls.Add(this.link_url_website);
             this.pnl_login.Controls.Add(this.title_link_website);
-            this.pnl_login.Controls.Add(this.forget_passwd);
             this.pnl_login.Controls.Add(this.pnl_form_login);
             this.pnl_login.Controls.Add(this.title_login);
             this.pnl_login.Controls.Add(this.btn_login);
@@ -244,20 +242,6 @@
             this.title_link_website.TabIndex = 3;
             this.title_link_website.Text = "Liên kết tới website:";
             this.title_link_website.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // forget_passwd
-            // 
-            this.forget_passwd.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.forget_passwd.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.forget_passwd.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.forget_passwd.Location = new System.Drawing.Point(234, 308);
-            this.forget_passwd.Name = "forget_passwd";
-            this.forget_passwd.Size = new System.Drawing.Size(134, 31);
-            this.forget_passwd.TabIndex = 3;
-            this.forget_passwd.Text = "Quên mật khẩu ?";
-            this.forget_passwd.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.forget_passwd.MouseLeave += new System.EventHandler(this.forget_passwd_MouseLeave);
-            this.forget_passwd.MouseHover += new System.EventHandler(this.forget_passwd_MouseHover);
             // 
             // pnl_form_login
             // 
@@ -361,7 +345,6 @@
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Panel pnl_password_icon;
         private System.Windows.Forms.Panel pnl_user_icon;
-        private System.Windows.Forms.Label forget_passwd;
         private System.Windows.Forms.Label name_logo;
         private System.Windows.Forms.Panel pnl_logo;
         private System.Windows.Forms.Label name_design;

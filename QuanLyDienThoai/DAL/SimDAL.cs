@@ -104,7 +104,15 @@ namespace QuanLyDienThoai.DAL
             }
             return null;
         }
-        
+        public List<SIM> SearchBy_CustomerName(string name)
+        {
+            if (db.SIMs.Any(c => c.CUSTOMER.NAME.Contains(name)))
+            {
+                List<SIM> result = db.SIMs.Where(c => c.CUSTOMER.NAME.Contains(name)).ToList();
+                return result;
+            }
+            return null;
+        }
         public string getIDcustomer_in_Sim()
         {
             return (from h in db.SIMs where h.ID_SIM.Equals(sim.ID_SIM) select h.ID_CUSTOMER).FirstOrDefault();

@@ -26,6 +26,21 @@ namespace QuanLyDienThoai.GUI.Contract_GUI
         {
             InitializeComponent();
             Loadinfo_input();
+            txt_search.Text = "Tìm kiếm theo tên khách hàng...";
+
+            txt_search.GotFocus += RemoveText;
+            txt_search.LostFocus += AddText;
+        }
+
+        public void RemoveText(object sender, EventArgs e)
+        {
+            txt_search.Text = "";
+        }
+
+        public void AddText(object sender, EventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(txt_search.Text))
+                txt_search.Text = "Tìm kiếm theo tên khách hàng...";
         }
 
         // Tạo sẵn giá trị trong input như sau
@@ -186,6 +201,33 @@ namespace QuanLyDienThoai.GUI.Contract_GUI
             if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
             {
                 e.Handled = true;
+            }
+        }
+
+        private void btn_search_Click(object sender, EventArgs e)
+        {
+            search();
+        }
+        private void search()
+        {
+            if (contractbus.SearchBy_CustomerName(txt_search.Text) == null)
+            {
+                Print_MessageBox("Không tìm thấy dữ liệu", "Kết quả");
+            }
+            else
+            {
+                table_contract.DataSource = new BindingSource(contractbus.SearchBy_CustomerName(txt_search.Text), "");
+                txt_id_contract.Text = gridView1.GetFocusedRowCellValue("ID_CONTRACT").ToString();
+                txt_id_sim.Text = gridView1.GetFocusedRowCellValue("ID_SIM").ToString();
+
+                DateTime date = Convert.ToDateTime(gridView1.GetFocusedRowCellValue("DATEREGISTER").ToString());
+                picker_dateregister.Value = date;
+                txt_fee.Text = gridView1.GetFocusedRowCellValue("FEE").ToString();
+                string status = gridView1.GetFocusedRowCellValue("STATUS").ToString();
+                if (status == "True")
+                    group_rad_status.SelectedIndex = 1;
+                else
+                    group_rad_status.SelectedIndex = 0;
             }
         }
     }

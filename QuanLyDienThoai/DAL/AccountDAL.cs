@@ -19,29 +19,29 @@ namespace QuanLyDienThoai.DAL
             this.account.ID_ACCOUNT = id_account;
         }
 
-        public void setAccount(string email, string id_customer, string password, string type_account)
+        public void setAccount(string email, string id_customer, string password, string confirm_password, string type_account)
         {            
             this.account.EMAIL = email;
             this.account.ID_CUSTOMER = id_customer;
             this.account.PASSWORD = password;
             this.account.TYPE_ACCOUNT = type_account;
-        }
-
-        public void setAccount(string id_account, string email, string id_customer, string password, string type_account)
-        {
-            this.account.ID_ACCOUNT = id_account;
-            this.account.EMAIL = email;
-            this.account.ID_CUSTOMER = id_customer;
-            this.account.PASSWORD = password;
-            this.account.TYPE_ACCOUNT = type_account;
-        }
+            this.account.CONFIRMPASSWORD = confirm_password;
+        }        
         
         public IEnumerable<ACCOUNT> GetAll()
         {
             List<ACCOUNT> account = db.ACCOUNTs.Where(s => s.TYPE_ACCOUNT == "khachhang").ToList();
             return account;
         }
-
+        public IEnumerable<ACCOUNT> SearchBy_CustomerName(string name)
+        {
+            if (db.ACCOUNTs.Any(c => c.CUSTOMER.NAME.Contains(name) && c.TYPE_ACCOUNT == "khachhang"))
+            {
+                List<ACCOUNT> result = db.ACCOUNTs.Where(c => c.CUSTOMER.NAME.Contains(name) && c.TYPE_ACCOUNT=="khachhang").ToList();
+                return result;
+            }
+            return null;
+        }
         public void Create()
         {
             var numeric_value = 1;
@@ -54,8 +54,10 @@ namespace QuanLyDienThoai.DAL
                     id_str = "ACC";
             }
             account.ID_ACCOUNT = id_str + numeric_value.ToString();
+
             db.ACCOUNTs.Add(account);
             db.SaveChanges();
+
             db.Entry(account).State = EntityState.Detached;
         }
 

@@ -25,6 +25,21 @@ namespace QuanLyDienThoai.GUI.Account_GUI
         public Account_GUI()
         {
             InitializeComponent();
+            txt_search.Text = "Tìm kiếm theo tên khách hàng...";
+
+            txt_search.GotFocus += RemoveText;
+            txt_search.LostFocus += AddText;
+        }
+
+        public void RemoveText(object sender, EventArgs e)
+        {
+            txt_search.Text = "";
+        }
+
+        public void AddText(object sender, EventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(txt_search.Text))
+                txt_search.Text = "Tìm kiếm theo tên khách hàng...";
         }
 
         // Hàm tô màu viền cho panels
@@ -134,13 +149,7 @@ namespace QuanLyDienThoai.GUI.Account_GUI
             else
                 Print_MessageBox("Không có thông tin này !!!", "Lỗi");
         }
-
-        // Function Tìm Tên KH
-        private void search()
-        {
-           
-        }
-
+        
         // Function Popup Bảng thêm row
         private void popup_add()
         {            
@@ -160,6 +169,26 @@ namespace QuanLyDienThoai.GUI.Account_GUI
             }            
         }
 
-        
+        private void btn_search_Click(object sender, EventArgs e)
+        {
+            search();
+        } 
+
+        // Function Tìm Tên KH
+        private void search()
+        {
+            if (accountbus.SearchBy_CustomerName(txt_search.Text) == null)
+            {
+                Print_MessageBox("Không tìm thấy dữ liệu", "Kết quả");
+            }
+            else
+            {
+                table_account.DataSource = new BindingSource(accountbus.SearchBy_CustomerName(txt_search.Text), "");
+                txt_id_account.Text = gridView1.GetFocusedRowCellValue("ID_ACCOUNT").ToString();
+                txt_id_customer.Text = gridView1.GetFocusedRowCellValue("ID_CUSTOMER").ToString();
+                txt_email.Text = gridView1.GetFocusedRowCellValue("EMAIL").ToString();
+                txt_password.Text = gridView1.GetFocusedRowCellValue("PASSWORD").ToString();
+            }
+        }
     }
 }

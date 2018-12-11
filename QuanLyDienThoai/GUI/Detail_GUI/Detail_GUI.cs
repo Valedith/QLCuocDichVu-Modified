@@ -24,6 +24,21 @@ namespace QuanLyDienThoai.GUI.Detail_GUI
         public Detail_GUI()
         {
             InitializeComponent();
+            txt_search.Text = "Tìm kiếm theo tên khách hàng...";
+
+            txt_search.GotFocus += RemoveText;
+            txt_search.LostFocus += AddText;
+        }
+
+        public void RemoveText(object sender, EventArgs e)
+        {
+            txt_search.Text = "";
+        }
+
+        public void AddText(object sender, EventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(txt_search.Text))
+                txt_search.Text = "Tìm kiếm theo tên khách hàng...";
         }
 
         private void table_customer_Load(object sender, EventArgs e)
@@ -99,13 +114,13 @@ namespace QuanLyDienThoai.GUI.Detail_GUI
 
         private void search()
         {            
-            if(detail.SearchByIDSIM(txt_search.Text) == null)
+            if(detail.SearchByName(txt_search.Text) == null)
             {
                 Print_MessageBox("Không tìm thấy dữ liệu", "Kết quả");
             }
             else
             {
-                table_detail.DataSource = new BindingSource(detail.SearchByIDSIM(txt_search.Text), "");
+                table_detail.DataSource = new BindingSource(detail.SearchByName(txt_search.Text), "");
             }
         }
 

@@ -77,9 +77,9 @@ namespace QuanLyDienThoai.BUS
         public void checkSplitDate(DateTime currentDate)
         {
         }
-        public IEnumerable<DETAIL> SearchByIDSIM(string id)
+        public IEnumerable<DETAIL> SearchByName(string name)
         {
-            return detail_dal.SearchByIDSIM(id);
+            return detail_dal.SearchByName(name);
         }
         public int GetFare(string sim_id,DateTime date_export,DateTime date_cut)
         {

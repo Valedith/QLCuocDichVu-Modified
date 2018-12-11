@@ -36,7 +36,6 @@
             DevExpress.XtraEditors.TileItemElement tileItemElement5 = new DevExpress.XtraEditors.TileItemElement();
             DevExpress.XtraEditors.TileItemElement tileItemElement6 = new DevExpress.XtraEditors.TileItemElement();
             DevExpress.XtraEditors.TileItemElement tileItemElement7 = new DevExpress.XtraEditors.TileItemElement();
-            DevExpress.XtraEditors.TileItemElement tileItemElement8 = new DevExpress.XtraEditors.TileItemElement();
             this.pnl_title_winform = new System.Windows.Forms.Panel();
             this.lbl_time = new System.Windows.Forms.Label();
             this.pnl_icon_logo = new System.Windows.Forms.Panel();
@@ -53,7 +52,6 @@
             this.date_time = new DevExpress.XtraScheduler.DateNavigator();
             this.pnl_sidebar = new System.Windows.Forms.Panel();
             this.titlebar_group_service = new DevExpress.XtraBars.Navigation.TileBarGroup();
-            this.title_item_dashboard = new DevExpress.XtraBars.Navigation.TileBarItem();
             this.title_item_customers = new DevExpress.XtraBars.Navigation.TileBarItem();
             this.title_item_sim = new DevExpress.XtraBars.Navigation.TileBarItem();
             this.title_item_contracts = new DevExpress.XtraBars.Navigation.TileBarItem();
@@ -259,7 +257,6 @@
             // 
             // titlebar_group_service
             // 
-            this.titlebar_group_service.Items.Add(this.title_item_dashboard);
             this.titlebar_group_service.Items.Add(this.title_item_customers);
             this.titlebar_group_service.Items.Add(this.title_item_sim);
             this.titlebar_group_service.Items.Add(this.title_item_contracts);
@@ -269,25 +266,6 @@
             this.titlebar_group_service.Items.Add(this.title_item_account);
             this.titlebar_group_service.Name = "titlebar_group_service";
             this.titlebar_group_service.Text = "Quản lý dịch vụ";
-            // 
-            // title_item_dashboard
-            // 
-            this.title_item_dashboard.AppearanceItem.Normal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.title_item_dashboard.AppearanceItem.Normal.BorderColor = System.Drawing.Color.White;
-            this.title_item_dashboard.AppearanceItem.Normal.ForeColor = System.Drawing.Color.White;
-            this.title_item_dashboard.AppearanceItem.Normal.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.ForwardDiagonal;
-            this.title_item_dashboard.AppearanceItem.Normal.Options.UseBackColor = true;
-            this.title_item_dashboard.AppearanceItem.Normal.Options.UseBorderColor = true;
-            this.title_item_dashboard.AppearanceItem.Normal.Options.UseForeColor = true;
-            this.title_item_dashboard.AppearanceItem.Selected.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(134)))), ((int)(((byte)(244)))));
-            this.title_item_dashboard.AppearanceItem.Selected.Options.UseBackColor = true;
-            this.title_item_dashboard.DropDownOptions.BeakColor = System.Drawing.Color.Empty;
-            tileItemElement1.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image")));
-            tileItemElement1.Text = "Tổng quan";
-            this.title_item_dashboard.Elements.Add(tileItemElement1);
-            this.title_item_dashboard.Id = 0;
-            this.title_item_dashboard.ItemSize = DevExpress.XtraBars.Navigation.TileBarItemSize.Wide;
-            this.title_item_dashboard.Name = "title_item_dashboard";
             // 
             // title_item_customers
             // 
@@ -304,9 +282,9 @@
             this.title_item_customers.AppearanceItem.Selected.Options.UseBorderColor = true;
             this.title_item_customers.AppearanceItem.Selected.Options.UseForeColor = true;
             this.title_item_customers.DropDownOptions.BeakColor = System.Drawing.Color.Empty;
-            tileItemElement2.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image1")));
-            tileItemElement2.Text = "Khách hàng";
-            this.title_item_customers.Elements.Add(tileItemElement2);
+            tileItemElement1.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image")));
+            tileItemElement1.Text = "Khách hàng";
+            this.title_item_customers.Elements.Add(tileItemElement1);
             this.title_item_customers.Id = 1;
             this.title_item_customers.ItemSize = DevExpress.XtraBars.Navigation.TileBarItemSize.Wide;
             this.title_item_customers.Name = "title_item_customers";
@@ -322,9 +300,9 @@
             this.title_item_sim.AppearanceItem.Selected.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(134)))), ((int)(((byte)(244)))));
             this.title_item_sim.AppearanceItem.Selected.Options.UseBackColor = true;
             this.title_item_sim.DropDownOptions.BeakColor = System.Drawing.Color.Empty;
-            tileItemElement3.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image2")));
-            tileItemElement3.Text = "Danh sách Sim";
-            this.title_item_sim.Elements.Add(tileItemElement3);
+            tileItemElement2.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image1")));
+            tileItemElement2.Text = "Danh sách Sim";
+            this.title_item_sim.Elements.Add(tileItemElement2);
             this.title_item_sim.Id = 2;
             this.title_item_sim.ItemSize = DevExpress.XtraBars.Navigation.TileBarItemSize.Wide;
             this.title_item_sim.Name = "title_item_sim";
@@ -341,9 +319,9 @@
             this.title_item_contracts.AppearanceItem.Selected.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(134)))), ((int)(((byte)(244)))));
             this.title_item_contracts.AppearanceItem.Selected.Options.UseBackColor = true;
             this.title_item_contracts.DropDownOptions.BeakColor = System.Drawing.Color.Empty;
-            tileItemElement4.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image3")));
-            tileItemElement4.Text = "Hợp đồng";
-            this.title_item_contracts.Elements.Add(tileItemElement4);
+            tileItemElement3.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image2")));
+            tileItemElement3.Text = "Hợp đồng";
+            this.title_item_contracts.Elements.Add(tileItemElement3);
             this.title_item_contracts.Id = 3;
             this.title_item_contracts.ItemSize = DevExpress.XtraBars.Navigation.TileBarItemSize.Wide;
             this.title_item_contracts.Name = "title_item_contracts";
@@ -362,9 +340,9 @@
             this.title_item_orders.AppearanceItem.Selected.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(134)))), ((int)(((byte)(244)))));
             this.title_item_orders.AppearanceItem.Selected.Options.UseBackColor = true;
             this.title_item_orders.DropDownOptions.BeakColor = System.Drawing.Color.Empty;
-            tileItemElement5.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image4")));
-            tileItemElement5.Text = "Hóa đơn";
-            this.title_item_orders.Elements.Add(tileItemElement5);
+            tileItemElement4.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image3")));
+            tileItemElement4.Text = "Hóa đơn";
+            this.title_item_orders.Elements.Add(tileItemElement4);
             this.title_item_orders.Id = 4;
             this.title_item_orders.ItemSize = DevExpress.XtraBars.Navigation.TileBarItemSize.Wide;
             this.title_item_orders.Name = "title_item_orders";
@@ -380,9 +358,9 @@
             this.title_item_useservice.AppearanceItem.Selected.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(134)))), ((int)(((byte)(244)))));
             this.title_item_useservice.AppearanceItem.Selected.Options.UseBackColor = true;
             this.title_item_useservice.DropDownOptions.BeakColor = System.Drawing.Color.Empty;
-            tileItemElement6.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image5")));
-            tileItemElement6.Text = "Chi tiết sử dụng";
-            this.title_item_useservice.Elements.Add(tileItemElement6);
+            tileItemElement5.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image4")));
+            tileItemElement5.Text = "Chi tiết sử dụng";
+            this.title_item_useservice.Elements.Add(tileItemElement5);
             this.title_item_useservice.Id = 5;
             this.title_item_useservice.ItemSize = DevExpress.XtraBars.Navigation.TileBarItemSize.Wide;
             this.title_item_useservice.Name = "title_item_useservice";
@@ -396,9 +374,9 @@
             this.title_item_cal_time.AppearanceItem.Selected.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(134)))), ((int)(((byte)(244)))));
             this.title_item_cal_time.AppearanceItem.Selected.Options.UseBackColor = true;
             this.title_item_cal_time.DropDownOptions.BeakColor = System.Drawing.Color.Empty;
-            tileItemElement7.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image6")));
-            tileItemElement7.Text = "Cước phí tính theo giờ";
-            this.title_item_cal_time.Elements.Add(tileItemElement7);
+            tileItemElement6.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image5")));
+            tileItemElement6.Text = "Cước phí tính theo giờ";
+            this.title_item_cal_time.Elements.Add(tileItemElement6);
             this.title_item_cal_time.Id = 6;
             this.title_item_cal_time.ItemSize = DevExpress.XtraBars.Navigation.TileBarItemSize.Wide;
             this.title_item_cal_time.Name = "title_item_cal_time";
@@ -412,9 +390,9 @@
             this.title_item_account.AppearanceItem.Selected.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(134)))), ((int)(((byte)(244)))));
             this.title_item_account.AppearanceItem.Selected.Options.UseBackColor = true;
             this.title_item_account.DropDownOptions.BeakColor = System.Drawing.Color.Empty;
-            tileItemElement8.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image7")));
-            tileItemElement8.Text = "Tài khoản khách hàng";
-            this.title_item_account.Elements.Add(tileItemElement8);
+            tileItemElement7.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image6")));
+            tileItemElement7.Text = "Tài khoản khách hàng";
+            this.title_item_account.Elements.Add(tileItemElement7);
             this.title_item_account.Id = 7;
             this.title_item_account.ItemSize = DevExpress.XtraBars.Navigation.TileBarItemSize.Wide;
             this.title_item_account.Name = "title_item_account";
@@ -511,6 +489,7 @@
             // 
             // pnl_service_account
             // 
+            this.pnl_service_account.Caption = "pnl_service_account";
             this.pnl_service_account.Name = "pnl_service_account";
             this.pnl_service_account.Size = new System.Drawing.Size(885, 527);
             // 
@@ -597,7 +576,6 @@
         private DevExpress.XtraScheduler.DateNavigator date_time;
         private System.Windows.Forms.Panel pnl_sidebar;
         private DevExpress.XtraBars.Navigation.TileBarGroup titlebar_group_service;
-        private DevExpress.XtraBars.Navigation.TileBarItem title_item_dashboard;
         private DevExpress.XtraBars.Navigation.TileBarItem title_item_customers;
         private DevExpress.XtraBars.Navigation.TileBarItem title_item_sim;
         private DevExpress.XtraBars.Navigation.TileBarItem title_item_contracts;

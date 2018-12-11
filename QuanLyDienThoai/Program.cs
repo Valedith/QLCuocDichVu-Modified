@@ -17,7 +17,7 @@ namespace QuanLyDienThoai
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Main_GUI());
+            Application.Run(new Login());
         }
     }
 }

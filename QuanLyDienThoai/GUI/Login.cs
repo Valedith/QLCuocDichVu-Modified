@@ -28,7 +28,7 @@ namespace QuanLyDienThoai.GUI
 
         private void txt_password_KeyDown(object sender, KeyEventArgs e)
         {
-            if(e.KeyCode == Keys.Enter)
+            if (e.KeyCode == Keys.Enter)
             {
                 login();
             }
@@ -101,15 +101,6 @@ namespace QuanLyDienThoai.GUI
         {
             link_url_website.ForeColor = Color.FromArgb(66, 134, 244);
         }
-
-        private void forget_passwd_MouseHover(object sender, EventArgs e)
-        {
-            forget_passwd.ForeColor = Color.FromArgb(255, 77, 77);
-        }
-
-        private void forget_passwd_MouseLeave(object sender, EventArgs e)
-        {
-            forget_passwd.ForeColor = Color.FromArgb(224, 224, 224);
-        }
+                
     }
 }

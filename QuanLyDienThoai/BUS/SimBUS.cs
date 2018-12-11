@@ -61,6 +61,10 @@ namespace QuanLyDienThoai.BUS
         {
             return sim_dal.SearchById_Sim(id_sim);
         }
+        public List<SIM> SearchBy_CustomerName(string name)
+        {
+            return sim_dal.SearchBy_CustomerName(name);
+        }
 
         public string getIDcustomer_in_Sim(string id_sim)
         {
