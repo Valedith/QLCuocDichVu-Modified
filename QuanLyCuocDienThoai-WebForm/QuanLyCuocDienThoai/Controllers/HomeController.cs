@@ -6,13 +6,13 @@ using System.Linq;
 using System.Net;
 using System.Web;
 using System.Web.Mvc;
-using QuanLyCuocDienThoai.Models;
+using QuanLyDienThoaiEntity.Models;
 
 namespace QuanLyCuocDienThoai.Controllers
 {
 	public class HomeController : Controller
 	{
-		private QLCuocDTEntities db = new QLCuocDTEntities();
+		private QLYCUOCDTEntities db = new QLYCUOCDTEntities();
 
 		[Authorize]
         public ActionResult Index()

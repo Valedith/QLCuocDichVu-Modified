@@ -13,6 +13,8 @@ using DevExpress.XtraGrid.Views.Grid;
 using QuanLyDienThoai.GUI.Customer_GUI;
 using QuanLyDienThoai.DAL;
 using QuanLyDienThoai.Public;
+using QuanLyDienThoaiEntity.Models;
+using QuanLyDienThoai.GUI.Sim_GUI;
 
 namespace QuanLyDienThoai.GUI.Account_GUI
 {
@@ -58,15 +60,16 @@ namespace QuanLyDienThoai.GUI.Account_GUI
             table_account.DataSource = new BindingSource(accountbus.GetAll(), "");
             table_account.MainView.PopulateColumns();
             ((GridView)table_account.MainView).Columns[0].Caption = "Mã tài khoản";
-            ((GridView)table_account.MainView).Columns[2].Caption = "Mã khách hàng";
             ((GridView)table_account.MainView).Columns[1].Caption = "Email";
-            ((GridView)table_account.MainView).Columns[3].Caption = "Mật khẩu";
-            ((GridView)table_account.MainView).Columns[4].Visible = false;
+            ((GridView)table_account.MainView).Columns[2].Visible = false;
+            ((GridView)table_account.MainView).Columns[3].Caption = "Mã khách hàng";
+            ((GridView)table_account.MainView).Columns[4].Caption = "Mật khẩu";
             ((GridView)table_account.MainView).Columns[5].Visible = false;
             ((GridView)table_account.MainView).Columns[6].Visible = false;
             ((GridView)table_account.MainView).Columns[7].Visible = false;
             ((GridView)table_account.MainView).Columns[8].Visible = false;
             ((GridView)table_account.MainView).Columns[9].Visible = false;
+            ((GridView)table_account.MainView).Columns[10].Visible = false;
 
         }
 
@@ -122,7 +125,14 @@ namespace QuanLyDienThoai.GUI.Account_GUI
         // Xem chi tiết của 1 khách hàng
         private void btn_view_customer_Click(object sender, EventArgs e)
         {
-           
+            if (customerbus.SearchById_Customer(txt_id_customer.Text) != null)
+            {
+                List<CUSTOMER> result = customerbus.SearchById_Customer(txt_id_customer.Text);
+                Details_Customer_GUI details_customer = new Details_Customer_GUI(result[0].ID_CUSTOMER, result[0].NAME, result[0].IDENTIFY.ToString(), result[0].JOB, result[0].POSITION, result[0].ADDRESS);
+                details_customer.ShowDialog();
+            }
+            else
+                Print_MessageBox("Không có thông tin này !!!", "Lỗi");
         }
 
         // Function Tìm Tên KH

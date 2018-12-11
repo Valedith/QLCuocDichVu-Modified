@@ -4,12 +4,14 @@ using System.Linq;
 using System.Data.Entity;
 using System.Text;
 using System.Threading.Tasks;
+using QuanLyDienThoaiEntity.Models;
+
 
 namespace QuanLyDienThoai.DAL
 {
     class DetailDAL
     {
-        QLYCUOCDT_DB db = new QLYCUOCDT_DB();
+        QLYCUOCDTEntities db = new QLYCUOCDTEntities();
         DETAIL detail = new DETAIL();
         public void setDetail(int id)
         {

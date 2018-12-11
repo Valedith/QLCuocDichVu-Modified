@@ -4,12 +4,14 @@ using System.Data.Entity;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using QuanLyDienThoaiEntity.Models;
+
 
 namespace QuanLyDienThoai.DAL
 {
     class AccountDAL
     {
-        QLYCUOCDT_DB db = new QLYCUOCDT_DB();
+        QLYCUOCDTEntities db = new QLYCUOCDTEntities();
         ACCOUNT account = new ACCOUNT();
 
         public void setAccount(string id_account)

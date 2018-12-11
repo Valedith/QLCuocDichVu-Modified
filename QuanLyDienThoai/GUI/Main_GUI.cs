@@ -95,5 +95,10 @@ namespace QuanLyDienThoai.GUI
         {
 
         }
+
+        private void title_item_contracts_ItemClick(object sender, TileItemEventArgs e)
+        {
+
+        }
     }
 }

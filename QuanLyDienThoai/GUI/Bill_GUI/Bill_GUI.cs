@@ -16,6 +16,7 @@ using QuanLyDienThoai.DAL;
 using DevExpress.Utils;
 using QuanLyDienThoai.GUI.Sim_GUI;
 using System.Globalization;
+using QuanLyDienThoaiEntity.Models;
 
 namespace QuanLyDienThoai.GUI.Bill_GUI
 {

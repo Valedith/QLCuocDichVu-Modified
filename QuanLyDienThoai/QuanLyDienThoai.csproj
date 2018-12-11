@@ -96,52 +96,13 @@
     <Compile Include="BUS\DetailBUS.cs" />
     <Compile Include="BUS\FareBUS.cs" />
     <Compile Include="BUS\SimBUS.cs" />
-    <Compile Include="DAL\ACCOUNT.cs">
-      <DependentUpon>QuanLyDienThoaiDB.tt</DependentUpon>
-    </Compile>
     <Compile Include="DAL\AccountDAL.cs" />
-    <Compile Include="DAL\ADMIN.cs">
-      <DependentUpon>QuanLyDienThoaiDB.tt</DependentUpon>
-    </Compile>
     <Compile Include="DAL\AdminDAL.cs" />
-    <Compile Include="DAL\BILL.cs">
-      <DependentUpon>QuanLyDienThoaiDB.tt</DependentUpon>
-    </Compile>
     <Compile Include="DAL\BillDAL.cs" />
-    <Compile Include="DAL\CONTRACT.cs">
-      <DependentUpon>QuanLyDienThoaiDB.tt</DependentUpon>
-    </Compile>
     <Compile Include="DAL\ContractDAL.cs" />
-    <Compile Include="DAL\CUSTOMER.cs">
-      <DependentUpon>QuanLyDienThoaiDB.tt</DependentUpon>
-    </Compile>
     <Compile Include="DAL\CustomerDAL.cs" />
-    <Compile Include="DAL\DETAIL.cs">
-      <DependentUpon>QuanLyDienThoaiDB.tt</DependentUpon>
-    </Compile>
     <Compile Include="DAL\DetailDAL.cs" />
-    <Compile Include="DAL\FARE.cs">
-      <DependentUpon>QuanLyDienThoaiDB.tt</DependentUpon>
-    </Compile>
     <Compile Include="DAL\FareDAL.cs" />
-    <Compile Include="DAL\QuanLyDienThoaiDB.Context.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>QuanLyDienThoaiDB.Context.tt</DependentUpon>
-    </Compile>
-    <Compile Include="DAL\QuanLyDienThoaiDB.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>QuanLyDienThoaiDB.tt</DependentUpon>
-    </Compile>
-    <Compile Include="DAL\QuanLyDienThoaiDB.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>QuanLyDienThoaiDB.edmx</DependentUpon>
-    </Compile>
-    <Compile Include="DAL\SIM.cs">
-      <DependentUpon>QuanLyDienThoaiDB.tt</DependentUpon>
-    </Compile>
     <Compile Include="DAL\SimDAL.cs" />
     <Compile Include="GUI\Account_GUI\Account_GUI.cs">
       <SubType>UserControl</SubType>
@@ -320,13 +281,6 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EntityDeploy Include="DAL\QuanLyDienThoaiDB.edmx">
-      <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>QuanLyDienThoaiDB.Designer.cs</LastGenOutput>
-    </EntityDeploy>
-    <None Include="DAL\QuanLyDienThoaiDB.edmx.diagram">
-      <DependentUpon>QuanLyDienThoaiDB.edmx</DependentUpon>
-    </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -339,19 +293,11 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="DAL\QuanLyDienThoaiDB.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>QuanLyDienThoaiDB.edmx</DependentUpon>
-      <LastGenOutput>QuanLyDienThoaiDB.Context.cs</LastGenOutput>
-    </Content>
-    <Content Include="DAL\QuanLyDienThoaiDB.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>QuanLyDienThoaiDB.edmx</DependentUpon>
-      <LastGenOutput>QuanLyDienThoaiDB.cs</LastGenOutput>
-    </Content>
     <Content Include="img\call.ico" />
     <Content Include="img\call.png" />
     <Content Include="img\exit_icon_white.png" />
@@ -363,6 +309,12 @@
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\QuanLyDienThoaiEntity\QuanLyDienThoaiEntity.csproj">
+      <Project>{4697681E-E51B-4BD4-AA86-C6181EF2FC4E}</Project>
+      <Name>QuanLyDienThoaiEntity</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

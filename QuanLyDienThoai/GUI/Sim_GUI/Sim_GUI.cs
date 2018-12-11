@@ -12,6 +12,7 @@ using QuanLyDienThoai.BUS;
 using DevExpress.XtraGrid.Views.Grid;
 using QuanLyDienThoai.GUI.Customer_GUI;
 using QuanLyDienThoai.DAL;
+using QuanLyDienThoaiEntity.Models;
 
 namespace QuanLyDienThoai.GUI.Sim_GUI
 {

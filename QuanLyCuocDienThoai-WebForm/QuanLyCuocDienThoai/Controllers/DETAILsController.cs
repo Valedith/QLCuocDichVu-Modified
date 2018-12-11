@@ -7,13 +7,13 @@ using System.Net;
 using System.Web;
 using System.Web.Mvc;
 using System.Web.Security;
-using QuanLyCuocDienThoai.Models;
+using QuanLyDienThoaiEntity.Models;
 
 namespace QuanLyCuocDienThoai.Controllers
 {
     public class DETAILsController : Controller
     {
-        private QLCuocDTEntities db = new QLCuocDTEntities();
+        private QLYCUOCDTEntities db = new QLYCUOCDTEntities();
 
         // GET: DETAILs
         public ActionResult Index(string id, string simID, string StartDate, string EndDate)

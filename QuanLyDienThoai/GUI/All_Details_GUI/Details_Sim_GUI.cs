@@ -1,5 +1,6 @@
 ﻿using QuanLyDienThoai.BUS;
 using QuanLyDienThoai.DAL;
+using QuanLyDienThoaiEntity.Models;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;

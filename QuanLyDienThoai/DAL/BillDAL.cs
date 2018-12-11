@@ -3,11 +3,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Data.Entity;
 using System.Net.Mail;
+using QuanLyDienThoaiEntity.Models;
+
 namespace QuanLyDienThoai.DAL
 {
     class BillDAL
     {
-        QLYCUOCDT_DB db = new QLYCUOCDT_DB();
+        QLYCUOCDTEntities db = new QLYCUOCDTEntities();
         BILL bill = new BILL();        
         public void setBill(string id, string id_sim, DateTime date_ex, DateTime date_cut, int postage, int fare, bool status)
         {

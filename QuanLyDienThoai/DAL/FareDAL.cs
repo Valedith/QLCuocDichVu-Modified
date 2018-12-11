@@ -4,12 +4,14 @@ using System.Linq;
 using System.Data.Entity;
 using System.Text;
 using System.Threading.Tasks;
+using QuanLyDienThoaiEntity.Models;
+
 
 namespace QuanLyDienThoai.DAL
 {
     class FareDAL
     {
-        QLYCUOCDT_DB db = new QLYCUOCDT_DB();
+        QLYCUOCDTEntities db = new QLYCUOCDTEntities();
         FARE fare = new FARE();
         public void setFare(string id, int fare1, TimeSpan start, TimeSpan stop)
         {

@@ -14,6 +14,7 @@ using DevExpress.XtraBars.Docking2010;
 using QuanLyDienThoai.GUI.Customer_GUI;
 using QuanLyDienThoai.DAL;
 using QuanLyDienThoai.GUI.Sim_GUI;
+using QuanLyDienThoaiEntity.Models;
 
 namespace QuanLyDienThoai.GUI.Contract_GUI
 {

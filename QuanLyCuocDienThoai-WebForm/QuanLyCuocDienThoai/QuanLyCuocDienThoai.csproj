@@ -165,50 +165,14 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Models\ACCOUNT.cs">
-      <DependentUpon>QLCuocDT.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\BILL.cs">
-      <DependentUpon>QLCuocDT.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\CONTRACT.cs">
-      <DependentUpon>QLCuocDT.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\CUSTOMER.cs">
-      <DependentUpon>QLCuocDT.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\DETAIL.cs">
-      <DependentUpon>QLCuocDT.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\FARE.cs">
-      <DependentUpon>QLCuocDT.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\QLCuocDT.Context.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>QLCuocDT.Context.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\QLCuocDT.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>QLCuocDT.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\QLCuocDT.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>QLCuocDT.edmx</DependentUpon>
-    </Compile>
-    <Compile Include="ViewModels\BillDetails.cs" />
-    <Compile Include="ViewModels\ResetPasswordModel.cs" />
-    <Compile Include="Models\SIM.cs">
-      <DependentUpon>QLCuocDT.tt</DependentUpon>
-    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="App_Data\QLCuocDT.mdf" />
-    <Content Include="App_Data\QLCuocDT_log.ldf">
-      <DependentUpon>QLCuocDT.mdf</DependentUpon>
+    <Content Include="..\..\QuanLyDienThoaiEntity\App_Data\QLYCUOCDT.mdf">
+      <Link>App_Data\QLYCUOCDT.mdf</Link>
+    </Content>
+    <Content Include="..\..\QuanLyDienThoaiEntity\App_Data\QLYCUOCDT_log.ldf">
+      <Link>App_Data\QLYCUOCDT_log.ldf</Link>
     </Content>
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
@@ -315,27 +279,10 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
-    <Content Include="Models\QLCuocDT.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>QLCuocDT.Context.cs</LastGenOutput>
-      <DependentUpon>QLCuocDT.edmx</DependentUpon>
-    </Content>
-    <Content Include="Models\QLCuocDT.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>QLCuocDT.edmx</DependentUpon>
-      <LastGenOutput>QLCuocDT.cs</LastGenOutput>
-    </Content>
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <EntityDeploy Include="Models\QLCuocDT.edmx">
-      <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>QLCuocDT.Designer.cs</LastGenOutput>
-    </EntityDeploy>
-    <Content Include="Models\QLCuocDT.edmx.diagram">
-      <DependentUpon>QLCuocDT.edmx</DependentUpon>
     </Content>
     <Content Include="Content\Template\bower.json" />
     <Content Include="Content\Template\less\mixins.less" />
@@ -401,14 +348,9 @@
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
     <Content Include="Scripts\modernizr-2.8.3.js" />
-    <Content Include="Web.config" />
-    <Content Include="Web.Debug.config">
-      <DependentUpon>Web.config</DependentUpon>
+    <Content Include="Views\Web.config">
+      <SubType>Designer</SubType>
     </Content>
-    <Content Include="Web.Release.config">
-      <DependentUpon>Web.config</DependentUpon>
-    </Content>
-    <Content Include="Views\Web.config" />
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
@@ -429,6 +371,13 @@
     <Content Include="Views\Home\BillDetails.cshtml" />
     <Content Include="Views\DETAILs\Details.cshtml" />
     <Content Include="Views\DETAILs\Index.cshtml" />
+    <Content Include="Web.config" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
@@ -446,6 +395,12 @@
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\QuanLyDienThoaiEntity\QuanLyDienThoaiEntity.csproj">
+      <Project>{4697681E-E51B-4BD4-AA86-C6181EF2FC4E}</Project>
+      <Name>QuanLyDienThoaiEntity</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

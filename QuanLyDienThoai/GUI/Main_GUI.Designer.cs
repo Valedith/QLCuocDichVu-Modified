@@ -31,12 +31,12 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main_GUI));
             DevExpress.XtraEditors.TileItemElement tileItemElement1 = new DevExpress.XtraEditors.TileItemElement();
             DevExpress.XtraEditors.TileItemElement tileItemElement2 = new DevExpress.XtraEditors.TileItemElement();
-            DevExpress.XtraEditors.TileItemElement tileItemElement8 = new DevExpress.XtraEditors.TileItemElement();
             DevExpress.XtraEditors.TileItemElement tileItemElement3 = new DevExpress.XtraEditors.TileItemElement();
             DevExpress.XtraEditors.TileItemElement tileItemElement4 = new DevExpress.XtraEditors.TileItemElement();
             DevExpress.XtraEditors.TileItemElement tileItemElement5 = new DevExpress.XtraEditors.TileItemElement();
             DevExpress.XtraEditors.TileItemElement tileItemElement6 = new DevExpress.XtraEditors.TileItemElement();
             DevExpress.XtraEditors.TileItemElement tileItemElement7 = new DevExpress.XtraEditors.TileItemElement();
+            DevExpress.XtraEditors.TileItemElement tileItemElement8 = new DevExpress.XtraEditors.TileItemElement();
             this.pnl_title_winform = new System.Windows.Forms.Panel();
             this.lbl_time = new System.Windows.Forms.Label();
             this.pnl_icon_logo = new System.Windows.Forms.Panel();
@@ -55,21 +55,21 @@
             this.titlebar_group_service = new DevExpress.XtraBars.Navigation.TileBarGroup();
             this.title_item_dashboard = new DevExpress.XtraBars.Navigation.TileBarItem();
             this.title_item_customers = new DevExpress.XtraBars.Navigation.TileBarItem();
-            this.title_item_account = new DevExpress.XtraBars.Navigation.TileBarItem();
             this.title_item_sim = new DevExpress.XtraBars.Navigation.TileBarItem();
             this.title_item_contracts = new DevExpress.XtraBars.Navigation.TileBarItem();
             this.title_item_orders = new DevExpress.XtraBars.Navigation.TileBarItem();
             this.title_item_useservice = new DevExpress.XtraBars.Navigation.TileBarItem();
             this.title_item_cal_time = new DevExpress.XtraBars.Navigation.TileBarItem();
+            this.title_item_account = new DevExpress.XtraBars.Navigation.TileBarItem();
             this.titlebar_service = new DevExpress.XtraBars.Navigation.TileBar();
             this.pnl_all_service = new DevExpress.XtraBars.Navigation.NavigationFrame();
-            this.pnl_service_contracts = new DevExpress.XtraBars.Navigation.NavigationPage();
-            this.pnl_service_dashboard = new DevExpress.XtraBars.Navigation.NavigationPage();
-            this.pnl_service_customer = new DevExpress.XtraBars.Navigation.NavigationPage();
-            this.pnl_service_sim = new DevExpress.XtraBars.Navigation.NavigationPage();
-            this.pnl_service_orders = new DevExpress.XtraBars.Navigation.NavigationPage();
-            this.pnl_use_service = new DevExpress.XtraBars.Navigation.NavigationPage();
             this.pnl_service_cal_time = new DevExpress.XtraBars.Navigation.NavigationPage();
+            this.pnl_use_service = new DevExpress.XtraBars.Navigation.NavigationPage();
+            this.pnl_service_orders = new DevExpress.XtraBars.Navigation.NavigationPage();
+            this.pnl_service_contracts = new DevExpress.XtraBars.Navigation.NavigationPage();
+            this.pnl_service_sim = new DevExpress.XtraBars.Navigation.NavigationPage();
+            this.pnl_service_customer = new DevExpress.XtraBars.Navigation.NavigationPage();
+            this.pnl_service_dashboard = new DevExpress.XtraBars.Navigation.NavigationPage();
             this.pnl_service_account = new DevExpress.XtraBars.Navigation.NavigationPage();
             this.pnl_footer = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
@@ -241,7 +241,7 @@
             this.date_time.CaseMonthNames = DevExpress.XtraEditors.Controls.TextCaseMode.UpperCase;
             this.date_time.DateTime = new System.DateTime(2018, 11, 27, 0, 0, 0, 0);
             this.date_time.EditValue = new System.DateTime(2018, 11, 27, 0, 0, 0, 0);
-            this.date_time.FirstDayOfWeek = System.DayOfWeek.Monday;
+            this.date_time.FirstDayOfWeek = System.DayOfWeek.Sunday;
             this.date_time.Location = new System.Drawing.Point(1, 217);
             this.date_time.Name = "date_time";
             this.date_time.Size = new System.Drawing.Size(215, 238);
@@ -311,22 +311,6 @@
             this.title_item_customers.ItemSize = DevExpress.XtraBars.Navigation.TileBarItemSize.Wide;
             this.title_item_customers.Name = "title_item_customers";
             // 
-            // title_item_account
-            // 
-            this.title_item_account.AppearanceItem.Normal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.title_item_account.AppearanceItem.Normal.ForeColor = System.Drawing.Color.White;
-            this.title_item_account.AppearanceItem.Normal.Options.UseBackColor = true;
-            this.title_item_account.AppearanceItem.Normal.Options.UseForeColor = true;
-            this.title_item_account.AppearanceItem.Selected.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(134)))), ((int)(((byte)(244)))));
-            this.title_item_account.AppearanceItem.Selected.Options.UseBackColor = true;
-            this.title_item_account.DropDownOptions.BeakColor = System.Drawing.Color.Empty;
-            tileItemElement8.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image7")));
-            tileItemElement8.Text = "Tài khoản khách hàng";
-            this.title_item_account.Elements.Add(tileItemElement8);
-            this.title_item_account.Id = 7;
-            this.title_item_account.ItemSize = DevExpress.XtraBars.Navigation.TileBarItemSize.Wide;
-            this.title_item_account.Name = "title_item_account";
-            // 
             // title_item_sim
             // 
             this.title_item_sim.AppearanceItem.Normal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
@@ -363,6 +347,7 @@
             this.title_item_contracts.Id = 3;
             this.title_item_contracts.ItemSize = DevExpress.XtraBars.Navigation.TileBarItemSize.Wide;
             this.title_item_contracts.Name = "title_item_contracts";
+            this.title_item_contracts.ItemClick += new DevExpress.XtraEditors.TileItemClickEventHandler(this.title_item_contracts_ItemClick);
             // 
             // title_item_orders
             // 
@@ -418,9 +403,24 @@
             this.title_item_cal_time.ItemSize = DevExpress.XtraBars.Navigation.TileBarItemSize.Wide;
             this.title_item_cal_time.Name = "title_item_cal_time";
             // 
+            // title_item_account
+            // 
+            this.title_item_account.AppearanceItem.Normal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.title_item_account.AppearanceItem.Normal.ForeColor = System.Drawing.Color.White;
+            this.title_item_account.AppearanceItem.Normal.Options.UseBackColor = true;
+            this.title_item_account.AppearanceItem.Normal.Options.UseForeColor = true;
+            this.title_item_account.AppearanceItem.Selected.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(134)))), ((int)(((byte)(244)))));
+            this.title_item_account.AppearanceItem.Selected.Options.UseBackColor = true;
+            this.title_item_account.DropDownOptions.BeakColor = System.Drawing.Color.Empty;
+            tileItemElement8.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image7")));
+            tileItemElement8.Text = "Tài khoản khách hàng";
+            this.title_item_account.Elements.Add(tileItemElement8);
+            this.title_item_account.Id = 7;
+            this.title_item_account.ItemSize = DevExpress.XtraBars.Navigation.TileBarItemSize.Wide;
+            this.title_item_account.Name = "title_item_account";
+            // 
             // titlebar_service
             // 
-            this.titlebar_service.AllowDrag = false;
             this.titlebar_service.AllowItemHover = false;
             this.titlebar_service.AllowSelectedItem = true;
             this.titlebar_service.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(242)))), ((int)(((byte)(242)))));
@@ -431,7 +431,6 @@
             this.titlebar_service.LookAndFeel.UseDefaultLookAndFeel = false;
             this.titlebar_service.MaxId = 9;
             this.titlebar_service.Name = "titlebar_service";
-            this.titlebar_service.Position = 480;
             this.titlebar_service.ScrollMode = DevExpress.XtraEditors.TileControlScrollMode.ScrollButtons;
             this.titlebar_service.SelectedItem = this.title_item_account;
             this.titlebar_service.SelectionBorderWidth = 2;
@@ -468,35 +467,11 @@
             this.pnl_all_service.TabIndex = 16;
             this.pnl_all_service.Text = "navigationFrame1";
             // 
-            // pnl_service_contracts
+            // pnl_service_cal_time
             // 
-            this.pnl_service_contracts.Caption = "pnl_service_contracts";
-            this.pnl_service_contracts.Name = "pnl_service_contracts";
-            this.pnl_service_contracts.Size = new System.Drawing.Size(885, 527);
-            // 
-            // pnl_service_dashboard
-            // 
-            this.pnl_service_dashboard.Caption = "pnl_service_dashboard";
-            this.pnl_service_dashboard.Name = "pnl_service_dashboard";
-            this.pnl_service_dashboard.Size = new System.Drawing.Size(885, 527);
-            // 
-            // pnl_service_customer
-            // 
-            this.pnl_service_customer.Caption = "pnl_service_customer";
-            this.pnl_service_customer.Name = "pnl_service_customer";
-            this.pnl_service_customer.Size = new System.Drawing.Size(885, 527);
-            // 
-            // pnl_service_sim
-            // 
-            this.pnl_service_sim.Caption = "pnl_service_sim";
-            this.pnl_service_sim.Name = "pnl_service_sim";
-            this.pnl_service_sim.Size = new System.Drawing.Size(885, 527);
-            // 
-            // pnl_service_orders
-            // 
-            this.pnl_service_orders.Caption = "pnl_service_orders";
-            this.pnl_service_orders.Name = "pnl_service_orders";
-            this.pnl_service_orders.Size = new System.Drawing.Size(885, 527);
+            this.pnl_service_cal_time.Caption = "pnl_service_cal_time";
+            this.pnl_service_cal_time.Name = "pnl_service_cal_time";
+            this.pnl_service_cal_time.Size = new System.Drawing.Size(885, 527);
             // 
             // pnl_use_service
             // 
@@ -504,11 +479,35 @@
             this.pnl_use_service.Name = "pnl_use_service";
             this.pnl_use_service.Size = new System.Drawing.Size(885, 527);
             // 
-            // pnl_service_cal_time
+            // pnl_service_orders
             // 
-            this.pnl_service_cal_time.Caption = "pnl_service_cal_time";
-            this.pnl_service_cal_time.Name = "pnl_service_cal_time";
-            this.pnl_service_cal_time.Size = new System.Drawing.Size(885, 527);
+            this.pnl_service_orders.Caption = "pnl_service_orders";
+            this.pnl_service_orders.Name = "pnl_service_orders";
+            this.pnl_service_orders.Size = new System.Drawing.Size(885, 527);
+            // 
+            // pnl_service_contracts
+            // 
+            this.pnl_service_contracts.Caption = "pnl_service_contracts";
+            this.pnl_service_contracts.Name = "pnl_service_contracts";
+            this.pnl_service_contracts.Size = new System.Drawing.Size(885, 527);
+            // 
+            // pnl_service_sim
+            // 
+            this.pnl_service_sim.Caption = "pnl_service_sim";
+            this.pnl_service_sim.Name = "pnl_service_sim";
+            this.pnl_service_sim.Size = new System.Drawing.Size(885, 527);
+            // 
+            // pnl_service_customer
+            // 
+            this.pnl_service_customer.Caption = "pnl_service_customer";
+            this.pnl_service_customer.Name = "pnl_service_customer";
+            this.pnl_service_customer.Size = new System.Drawing.Size(885, 527);
+            // 
+            // pnl_service_dashboard
+            // 
+            this.pnl_service_dashboard.Caption = "pnl_service_dashboard";
+            this.pnl_service_dashboard.Name = "pnl_service_dashboard";
+            this.pnl_service_dashboard.Size = new System.Drawing.Size(885, 527);
             // 
             // pnl_service_account
             // 
